@@ -1,11 +1,15 @@
 import React from 'react'
 import LoginForm from './components/LoginForm'
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
 function App() {
   return (
-    <div>
-      <LoginForm />
-    </div>
+    <Provider store={store}>
+      <div>
+        <LoginForm />
+      </div>  
+    </Provider>
   )
 }
 
