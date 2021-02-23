@@ -1,0 +1,16 @@
+payload =>  state data
+
+Action => LOGIN_REQUEST, LOGIN, SET_USER, AUTH
+          INCREMENT, ADD, UP, Count,
+          DECREMENT SUB DOWN Count
+
+Action Creator =>  function(){
+  return {
+	  type: LOGIN_REQUEST
+	  payload: state data
+  }
+}
+
+Reducer -> LOGIN_REQUEST, REGISTER,
+
+Store -> centralised state
