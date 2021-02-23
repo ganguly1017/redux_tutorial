@@ -6,8 +6,8 @@ import {
 const initialState = {
   isLoggedIn: false,
   user: {
-    email: '',
-    password: ''
+    email: 'abc@abc.com',
+    password: '123456'
   }
 }
 

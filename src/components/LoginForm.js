@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { loginUser } from './../redux/actions/loginActions'
 
 class LoginForm extends Component {
 
@@ -6,8 +8,8 @@ class LoginForm extends Component {
     super(props)
 
     this.state = {
-      email: '',
-      password: ''
+      email: this.props.login.user.email,
+      password: this.props.login.user.password
     }
   }
 
@@ -20,8 +22,11 @@ class LoginForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+
+    const user = this.state
+    console.log(user)
     
-    console.log(this.state)
+    this.props.loginUser(user)
   }
 
   render() {
@@ -54,4 +59,13 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm
+const mapStateToProps = (state) => ({
+  login: state.login,
+  product: state.product
+})
+
+const mapDispatchToProps = {
+  loginUser
+}
+
+export default connect(mapStateToProps, mapDispatchToProps )(LoginForm)

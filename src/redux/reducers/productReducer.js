@@ -11,18 +11,18 @@ const initialState = {
 function productReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_PRODUCT:
-      var product = state.product
-      product.push(action.payload)
+      var p = state.product
+      p.push(action.payload)
       return {
         ...state,
-        product: product
+        product: p
       }
     case DELETE_PROUCT:
-      var product = state.product
-      product.slice(12)
+      var a = state.product
+      a.slice(12)
       return {
         ...state,
-        product: product
+        product: a
       }
     default:
       return state
