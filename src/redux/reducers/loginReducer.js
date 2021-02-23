@@ -1,5 +1,5 @@
 import {
-  LOGIN_REQUEST, REGISTER_USER
+  LOGIN_REQUEST
 } from './../actions/types'
 
 // intialState

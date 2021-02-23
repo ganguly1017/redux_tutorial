@@ -1,13 +1,23 @@
 import {
-  LOGIN_REQUEST,
-  REGISTER_USER
+  LOGIN_REQUEST
 } from './types'
 
 export function loginUser(payload){
-  return {
-    type: LOGIN_REQUEST,
-    payload: payload
+  return function(dispatch){
+    testDelay()
+
+    dispatch({
+      type: LOGIN_REQUEST,
+      payload: payload
+    })
+
   }
+}
+
+function testDelay(){
+  setTimeout(function(){
+    console.log("Hello from testDelay...")
+  }, 5000)
 }
 
 
